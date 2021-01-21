@@ -4,7 +4,7 @@ import { Request, Response } from 'express';
 const route: Router = Router();
 
 route.get('/', (req: Request, res: Response, next: () => void) => {
-    res.render('User') 
+    res.render('mainPage') 
     next()
 })
 

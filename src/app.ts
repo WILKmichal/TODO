@@ -15,7 +15,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.set('view engine', 'ejs')
-app.use('/favicon.ico', express.static('../public/images'));
+app.use('/favicon.ico', express.static('../public/images'))
+app.use(express.static('public'))
+app.use('/css',express.static(__dirname + 'public/styles'))
 
 app.use('/', mainPageRoute)
 
